@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Instruction Finetuning Demo",
+  "description": "An interactive blog post to teach instruction finetuning using few-shot prompting. Users can provide examples and see how they impact the AI model's output in real-time.",
+  "requestFramePermissions": []
+}

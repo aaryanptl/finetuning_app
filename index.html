@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Instruction Finetuning</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --background: oklch(0.9821 0 0);
+        --foreground: oklch(0.3485 0 0);
+        --card: oklch(1.0000 0 0);
+        --card-foreground: oklch(0.3485 0 0);
+        --popover: oklch(1.0000 0 0);
+        --popover-foreground: oklch(0.3485 0 0);
+        --primary: oklch(0.4891 0 0);
+        --primary-foreground: oklch(0.9551 0 0);
+        --secondary: oklch(0.93 0 0);
+        --secondary-foreground: oklch(0.3485 0 0);
+        --muted: oklch(0.9158 0 0);
+        --muted-foreground: oklch(0.4313 0 0);
+        --accent: oklch(0.9354 0.0456 94.8549);
+        --accent-foreground: oklch(0.4015 0.0436 37.9587);
+        --destructive: oklch(0.6627 0.0978 20.0041);
+        --destructive-foreground: oklch(1.0000 0 0);
+        --border: oklch(0.5538 0.0025 17.2320 / 0.5);
+        --input: oklch(0.95 0 0);
+        --ring: oklch(0.7058 0 0);
+        --radius: 0.625rem;
+        --font-sans: "Architects Daughter", sans-serif;
+        --tracking-normal: 0.5px;
+      }
+      .dark {
+        --background: oklch(0.2891 0 0);
+        --foreground: oklch(0.8945 0 0);
+        --card: oklch(0.3211 0 0);
+        --card-foreground: oklch(0.8945 0 0);
+        --popover: oklch(0.3211 0 0);
+        --popover-foreground: oklch(0.8945 0 0);
+        --primary: oklch(0.7572 0 0);
+        --primary-foreground: oklch(0.2891 0 0);
+        --secondary: oklch(0.4676 0 0);
+        --secondary-foreground: oklch(0.8078 0 0);
+        --muted: oklch(0.3904 0 0);
+        --muted-foreground: oklch(0.7058 0 0);
+        --accent: oklch(0.9067 0 0);
+        --accent-foreground: oklch(0.3211 0 0);
+        --destructive: oklch(0.7915 0.0491 18.2410);
+        --destructive-foreground: oklch(0.2891 0 0);
+        --border: oklch(0.4276 0 0);
+        --input: oklch(0.35 0 0);
+        --ring: oklch(0.8078 0 0);
+      }
+      body {
+        font-family: var(--font-sans);
+        letter-spacing: var(--tracking-normal);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              card: 'var(--card)',
+              'card-foreground': 'var(--card-foreground)',
+              popover: 'var(--popover)',
+              'popover-foreground': 'var(--popover-foreground)',
+              primary: 'var(--primary)',
+              'primary-foreground': 'var(--primary-foreground)',
+              secondary: 'var(--secondary)',
+              'secondary-foreground': 'var(--secondary-foreground)',
+              muted: 'var(--muted)',
+              'muted-foreground': 'var(--muted-foreground)',
+              accent: 'var(--accent)',
+              'accent-foreground': 'var(--accent-foreground)',
+              destructive: 'var(--destructive)',
+              'destructive-foreground': 'var(--destructive-foreground)',
+              border: 'var(--border)',
+              input: 'var(--input)',
+              ring: 'var(--ring)',
+            },
+            borderRadius: {
+              lg: 'var(--radius)',
+              md: 'calc(var(--radius) - 2px)',
+              sm: 'calc(var(--radius) - 4px)',
+            },
+            fontFamily: {
+              sans: ['var(--font-sans)', 'sans-serif'],
+            },
+             letterSpacing: {
+              normal: 'var(--tracking-normal)'
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-foreground">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
